@@ -55,7 +55,7 @@ export async function updateCurrentUser({ password, fullName, avatar }) {
   const { data, error } = await supabase.auth.updateUser(updateData);
 
   if (error) throw new Error(error.message);
-  if (!avatar) return data;
+  if (!avatar) return data.user;
 
   // 2. Upload the avatar image
   const fileName = `avatar-${data.user.id}-${Math.random()}`;
@@ -73,5 +73,5 @@ export async function updateCurrentUser({ password, fullName, avatar }) {
   });
 
   if (error2) throw new Error(error2.message);
-  return updatedUser;
+  return updatedUser.user;
 }
