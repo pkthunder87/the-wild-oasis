@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useRecentBookings } from "./useRecentBookings.js";
 import Spinner from "../../ui/Spinner.jsx";
 import { useRecentStays } from "./useRecentStays.js";
-import Stats from "./stats.jsx";
+import Stats from "./Stats.jsx";
 import { useCabins } from "../cabins/useCabins.js";
 import SalesChart from "./SalesChart.jsx";
 import DurationChart from "./DurationChart.jsx";
